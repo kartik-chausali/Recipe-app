@@ -9,7 +9,6 @@ import { DarkModeContext } from './context/DarkModeContext'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   const context = useContext(DarkModeContext)
 

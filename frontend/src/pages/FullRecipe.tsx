@@ -1,8 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
 import { Clock, Users, Heart, Star, ChefHat, Leaf, Award, DollarSign } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useLocation } from "react-router-dom"
@@ -205,7 +205,7 @@ export default function FullRecipe() {
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {recipeDetails?.extendedIngredients.map((ingredient, index) => (
+              {recipeDetails?.extendedIngredients.map((ingredient) => (
                 <div key={ingredient.id} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                   <img
                     src={`https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image}`}
@@ -235,7 +235,7 @@ export default function FullRecipe() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {recipeDetails?.analyzedInstructions[0]?.steps.map((step, index) => (
+              {recipeDetails?.analyzedInstructions[0]?.steps.map((step) => (
                 <div key={step.number} className="flex gap-4">
                   <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold text-sm">
                     {step.number}

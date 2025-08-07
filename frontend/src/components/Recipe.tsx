@@ -1,23 +1,22 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Clock, Users, Heart, Star } from 'lucide-react'
-import { useState } from 'react'
+import { Clock, Users, Star } from 'lucide-react'
 import type { SampleRecipeProps } from "./RecipeGrid"
 import { useNavigate } from "react-router-dom"
 
-interface RecipeCardProps {
-  id: string
-  image: string
-  name: string
-  description: string
-  cookTime: string
-  servings: number
-  rating: number
-  difficulty: 'Easy' | 'Medium' | 'Hard'
-  category: string
-  isLiked?: boolean
-}
+// interface RecipeCardProps {
+//   id: string
+//   image: string
+//   name: string
+//   description: string
+//   cookTime: string
+//   servings: number
+//   rating: number
+//   difficulty: 'Easy' | 'Medium' | 'Hard'
+//   category: string
+//   isLiked?: boolean
+// }
 
 export function RecipeCard({
   id,
@@ -31,22 +30,13 @@ export function RecipeCard({
   // const [liked, setLiked] = useState(isLiked)
   const navigate = useNavigate();
   
-  const handleLike = () => {
-    // setLiked(!liked)
-  }
+ 
 
   function handleReadMore(){
     navigate('/full' , {state: {id}});
   }
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'Easy': return 'bg-green-100 text-green-700'
-      case 'Medium': return 'bg-yellow-100 text-yellow-700'
-      case 'Hard': return 'bg-red-100 text-red-700'
-      default: return 'bg-gray-100 text-gray-700'
-    }
-  }
+  
 
   return (
     <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-white">

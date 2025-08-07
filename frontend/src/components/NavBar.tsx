@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { ChefHat } from "lucide-react";
-import DarkModeToggle from "./ui/DarkModeToggle";
-import { Button } from "./ui/button";
+
 
 export default function NavBar(){
 
